@@ -62,7 +62,7 @@ namespace CRM3
                     listBox1.Items.Add(displayedEmployee);
                 }
             }
-
+            updateForm();
 
         }
         //tänker att använder får välja ett typ av lägen de vill vara i genom trycka på en av de två knapperna.
