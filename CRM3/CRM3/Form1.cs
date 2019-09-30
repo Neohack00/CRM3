@@ -18,6 +18,7 @@ namespace CRM3
         {   
             InitializeComponent();
             button1.Text = "Add";
+            button2.Text = "Show Customers";
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -26,10 +27,17 @@ namespace CRM3
             textBox1.Clear();
             textBox2.Clear();
             textBox1.Focus();
-            foreach(Customer c in MyCustomer)
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            listBox1.Items.Clear();
+            foreach (Customer displayedCustomer in MyCustomer)
             {
-                listBox1.Items.Add(c);
+                listBox1.Items.Add(displayedCustomer);
             }
+
         }
     }
 }
