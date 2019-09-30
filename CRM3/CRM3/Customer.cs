@@ -12,5 +12,10 @@ namespace CRM3
         public string LastName { get; set; }
         public bool VIP { get; set; }
 
+        public override string ToString()
+        {
+            return string.Format("{0} {1}" , FirstName , LastName);
+        }
+
     }
 }
