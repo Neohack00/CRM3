@@ -11,6 +11,11 @@ using System.Windows.Forms;
 
 namespace CRM3
 {
+
+/// För kunna fylla in de specifika proppertieserna som kunden och anställen  så måste jag ska en unikt infyllnings form just för kunden eller anställda.
+/// Planen är att add funktion kommer bytas ut mot två knappar "Kund" och "Employee". När man trycker en av knapperna så kommer en ny form skapas med en unikt infyllnings forumlär
+/// Läges funktion kommer tas bort samt show knappen. Istället kommer det två nya show knappar : En för kund listan och en för de anställda.
+
     public partial class Form1 : Form
     {
         ArrayList MyCustomer = new ArrayList();
@@ -62,12 +67,9 @@ namespace CRM3
                     listBox1.Items.Add(displayedEmployee);
                 }
             }
-            updateForm();
+           
 
         }
-        //tänker att använder får välja ett typ av lägen de vill vara i genom trycka på en av de två knapperna.
-        //Det kommer finnas två lägen "kund" eller "anställd". Där kund är default läget programet startat med.
-        //Den valda läget kommer ställa om funktionerna så att allt sparas och skrivs ut på rätt sätt
         private void button3_Click(object sender, EventArgs e)
         {
             mode = "Customer";
@@ -86,6 +88,6 @@ namespace CRM3
             label4.Text = string.Format("New {0}", mode);
             label5.Text = string.Format("{0} list", mode);
         }
-
+      
     }
 }
